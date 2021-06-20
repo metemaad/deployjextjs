@@ -4,11 +4,10 @@ on:
     branches:
       - main
 env:
-  CLOUD_RUN_PROJECT_ID: ${{ secrets.YOUR_PROJECT_ID }}
+  CLOUD_RUN_PROJECT_ID: ${{ secrets.CLOUD_RUN_PROJECT_ID }}
   CLOUD_RUN_REGION: us-west1
   GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.CLOUD_RUN_SERVICE_ACCOUNT }}
-  YOUR_PROJECT_ID: ${{secrets.YOUR_PROJECT_ID}}
-  JWT_SIGNING_PRIVATE_KEY: ${{secrets.JWT_SIGNING_PRIVATE_KEY}}
+  YOUR_PROJECT_ID: ${{secrets.CLOUD_RUN_PROJECT_ID}}
   REPO_NAME: nextjs-app
 jobs:
   build-and-deploy:
